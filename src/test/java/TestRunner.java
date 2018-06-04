@@ -6,6 +6,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
         features = "src/test/resources/features"
         ,glue={"stepDefinition"}
+        ,plugin = {"junit:target/cucumber/result.xml"}
 )
 
 public class TestRunner {
