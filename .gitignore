@@ -4,6 +4,9 @@
 .idea
 target
 .DS_Store
+.classpath
+.project
+.settings/
 
 # From https://github.com/github/gitignore/blob/master/Gradle.gitignore
 .gradle
