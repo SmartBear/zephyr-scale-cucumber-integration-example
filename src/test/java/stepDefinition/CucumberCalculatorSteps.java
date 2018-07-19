@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 
-public class CucumberSteps {
+public class CucumberCalculatorSteps {
     Calculator c;
 
     @Given("^a calculator I just turned on$")
