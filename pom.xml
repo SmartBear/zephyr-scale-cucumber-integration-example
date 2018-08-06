@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.adaptavist</groupId>
-    <artifactId>assessment</artifactId>
+    <groupId>com.adaptavist.tm4j</groupId>
+    <artifactId>tm4j-cucumber-integration-example</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -31,5 +31,4 @@
             <version>5.0.0</version>
         </dependency>
     </dependencies>
-
 </project>
