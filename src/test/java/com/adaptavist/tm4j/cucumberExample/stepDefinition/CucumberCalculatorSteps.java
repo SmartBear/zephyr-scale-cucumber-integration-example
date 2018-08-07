@@ -1,6 +1,6 @@
-package stepDefinition;
+package com.adaptavist.tm4j.cucumberExample.stepDefinition;
 
-import bdd.calculator.Calculator;
+import com.adaptavist.tm4j.cucumberExample.calculator.Calculator;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

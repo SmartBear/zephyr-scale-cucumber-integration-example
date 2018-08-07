@@ -1,4 +1,4 @@
-package bdd.calculator;
+package com.adaptavist.tm4j.cucumberExample.calculator;
 
 public class Calculator {
     private long state = 0;

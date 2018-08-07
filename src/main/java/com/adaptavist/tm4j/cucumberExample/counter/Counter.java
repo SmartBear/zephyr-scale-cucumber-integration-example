@@ -1,4 +1,4 @@
-package bdd.counter;
+package com.adaptavist.tm4j.cucumberExample.counter;
 
 public class Counter {
 	
