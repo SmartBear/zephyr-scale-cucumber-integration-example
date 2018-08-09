@@ -7,21 +7,21 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class CucumberCounterSteps {
-    Counter counter;
+public class CounterTest {
+    private Counter counter;
 
     @Given("^a counter I just turned on$")
-    public void a_counter_I_just_turned_on(){
+    public void aCounterIJustTurnedOn() {
         counter = new Counter();
     }
 
     @Then("^the size is (\\d+)$")
-    public void the_size_is(int result) {
-        Assert.assertEquals("Actual doesnt match expected ",counter.getSize(),result);
+    public void theSizeIs(int result) {
+        Assert.assertEquals("Actual doesn't match expected ", counter.getSize(), result);
     }
 
     @When("^I pass the word (\\w+)$")
-    public void letters_are_count(String text){
+    public void lettersAreCounted(String text) {
         counter.count(text);
     }
 }
