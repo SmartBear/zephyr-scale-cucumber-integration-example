@@ -1,0 +1,41 @@
+version: 2.1
+
+orbs:
+  smartbear: smartbear/zephyr-scale@dev:fa5e81b
+
+executors:
+  openjdk:
+    docker:
+      - image: cimg/openjdk:13.0
+        auth:
+          username: ${DOCKER_HUB_USERNAME}
+          password: ${DOCKER_HUB_PASSWORD}
+    resource_class: small
+
+jobs:
+  test:
+    executor: openjdk
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: mvn test
+      - store_test_results:
+          path: target/surefire-reports
+      - store_artifacts:
+          path: target/surefire-reports
+      - smartbear/upload-test-results:
+          api-token: ${ZEPHYR_SCALE_API_TOKEN}
+          project-key: "DEV"
+          create-test-cases: true
+          test-framework: "cucumber"
+          test-results-path: "target/cucumber/*.json"
+
+workflows:
+  build_test:
+    jobs:
+      - test:
+          filters:
+            branches:
+              ignore:
+                - main
